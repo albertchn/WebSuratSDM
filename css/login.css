@@ -1,0 +1,26 @@
+body{
+    background-image: url("../img/bg-baru.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+    overflow: hidden;
+    }
+
+input{
+    font-size: 5px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.card{
+    background-color: hsla(0, 0%, 100%, 0.3);;
+}
+
+@media (min-width: 768px) {
+    .card{
+        height: 555px;
+    }
+}
