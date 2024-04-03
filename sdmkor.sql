@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 27 Jun 2022 pada 10.32
--- Versi server: 10.4.21-MariaDB
--- Versi PHP: 8.0.11
+-- Waktu pembuatan: 03 Apr 2024 pada 09.02
+-- Versi server: 10.4.24-MariaDB
+-- Versi PHP: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -100,8 +100,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_user`, `nama`, `username`, `password`, `status`) VALUES
-(1, 'Nizar Wahyu', 94030033, '94030033', 'admin'),
-(2, 'Hendra Permana', 94041590, '94041590', 'anggota');
+(5, 'admin', 1234, '1234', 'admin');
 
 --
 -- Indexes for dumped tables
@@ -145,19 +144,19 @@ ALTER TABLE `komponen`
 -- AUTO_INCREMENT untuk tabel `surat_keluar`
 --
 ALTER TABLE `surat_keluar`
-  MODIFY `id_surat` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_surat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `surat_masuk`
 --
 ALTER TABLE `surat_masuk`
-  MODIFY `id_surat` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_surat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
