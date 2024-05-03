@@ -75,7 +75,7 @@ function hapus_srtmsk($id, $file)
 {
     global $conn;
     $id_surat = $id;
-    if (!unlink("../../fileSuratMasuk/" . $file)) {
+    if (!unlink("../../fileSuratMasuk/$file")) {
         return false;
     }
 
@@ -348,7 +348,8 @@ function ubah_foto($data)
 function upload($jenis_srt)
 {
 
-    $namaFile = $_FILES["file"]["name"];
+    $namaFile = str_replace("+", "_", $_FILES["file"]["name"]);
+    $namaFile = str_replace(" ", "_", $namaFile);
     $ukuranFile = $_FILES["file"]["size"];
     $error = $_FILES["file"]["error"];
     $tmpName = $_FILES["file"]["tmp_name"];
